@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Geoffrey Ochieng'  | Personal Website</title>
+        <style>
+            :root {
+                --bg: #f4f7fb;
+                --card: #ffffff;
+                --text: #1f2937;
+                --muted: #6b7280;
+                --accent: #2563eb;
+                --shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+                font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+                color: var(--text);
+                line-height: 1.6;
+            }
+            .page {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 28px 24px 48px;
+            }
+            header {
+                padding: 32px 0 28px;
+                text-align: center;
+            }
+            .hero-title {
+                font-size: clamp(2.5rem, 4vw, 4rem);
+                margin-bottom: 0.5rem;
+                letter-spacing: -0.04em;
+            }
+            .hero-subtitle {
+                color: var(--muted);
+                font-size: 1.05rem;
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            .button-row {
+                margin-top: 26px;
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+            .button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.95rem 1.6rem;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+            .button.primary {
+                background: var(--accent);
+                color: white;
+                box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
+            }
+            .button.secondary {
+                background: rgba(37, 99, 235, 0.08);
+                color: var(--accent);
+            }
+            .button:hover {
+                transform: translateY(-1px);
+            }
+            .section {
+                margin-top: 40px;
+            }
+            .section h2 {
+                font-size: 1.6rem;
+                margin-bottom: 18px;
+            }
+            .card-grid {
+                display: grid;
+                gap: 20px;
+            }
+            .card {
+                background: var(--card);
+                border-radius: 24px;
+                padding: 24px;
+                box-shadow: var(--shadow);
+            }
+            .card p,
+            .card ul {
+                color: var(--muted);
+                margin-top: 12px;
+            }
+            .info-grid {
+                display: grid;
+                gap: 18px;
+            }
+            .info-item {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            .info-item strong {
+                color: var(--text);
+            }
+            .skills {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+                gap: 10px;
+            }
+            .skill {
+                background: #eef2ff;
+                color: #1d4ed8;
+                border-radius: 999px;
+                padding: 10px 14px;
+                font-size: 0.95rem;
+                text-align: center;
+            }
+            footer {
+                margin-top: 48px;
+                text-align: center;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+            @media (min-width: 720px) {
+                .hero-details {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 32px;
+                }
+                .hero-copy {
+                    text-align: left;
+                }
+                .hero-avatar {
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 32px;
+                    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 4rem;
+                    color: #2563eb;
+                    font-weight: 700;
+                }
+                .info-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <header>
+                <div class="hero-details">
+                    <div class="hero-copy">
+                        <p style="color: var(--accent); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.9rem;">Personal Website</p>
+                        <h1 class="hero-title">Geoffrey Ochieng'</h1>
+                        <p class="hero-subtitle">I am a passionate web creator student at Siaya Community Digital Hub who enjoys building clean, useful websites and projects that make it easier to connect with people online.</p>
+                        <div class="button-row">
+                            <a href="#about" class="button primary">About Me</a>
+                            <a href="#contact" class="button secondary">Contact</a>
+                        </div>
+                    </div>
+                    <div class="hero-avatar" aria-hidden="true">CJ</div>
+                </div>
+            </header>
+
+            <section id="about" class="section card">
+                <h2>About Me</h2>
+                <p>Hello! I’m <strong>Geoffrey Ochieng'</strong>, a web developer and designer student based in Siaya. I enjoy turning ideas into beautiful, responsive websites that help people share stories, build businesses, and grow brands.</p>
+            
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>Location</strong>
+                        <span> Homabay, Kenya.</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Role</strong>
+                        <span>Front-end Developer / Web Designer student</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Interests</strong>
+                        <span>Design, HTML, CSS, JavaScript, UX</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Email</strong>
+                        <span><a href="mailto:ochienggeoffrey185@gmail.com style="color: var(--accent); text-decoration: none;">ochienggeoffrey185@gmail.com</a></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section card">
+                <h2>Skills yet to acquire</h2>
+                <div class="skills">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">Responsive Design</span>
+                    <span class="skill">UI/UX</span>
+                    <span class="skill">Git</span>
+                </div>
+            </section>
+
+            <section class="section card">
+                <h2>Projects</h2>
+                <div class="card-grid">
+                    <div class="card" style="padding: 20px;">
+                        <h3>Portfolio Website</h3>
+                        <p>Inspiring to create a modern portfolio layout with smooth navigation, project previews, and mobile-friendly design.</p>
+                    </div>
+                    <div class="card" style="padding: 20px;">
+                        <h3>Business Landing Page</h3>
+                        <p>Trying to figure out how to design a clean landing page for a small business with clear call-to-action sections and a polished visual style.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section card">
+                <h2>Contact</h2>
+                <p>If you’d like to work together or just want to say hello, send me a message at <a href="mailto:you@example.com" style="color: var(--accent);">ochienggeoffrey185@gmail.com</a>.</p>
+            </section>
+
+            <footer>
+                <p>Designed and built by Geoffrey Ochieng'.</p>
+            </footer>
+        </div>
+    </body>
+</html>
